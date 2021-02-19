@@ -7,4 +7,4 @@ Name: @PROJECT_NAME@
 Description: Unsupervised text tokenizer and detokenizer for Neural Network-based text generation.
 Version: @PROJECT_VERSION@
 Libs: -L${libdir} -lsentencepiece -lsentencepiece_train @libprotobuf_lite@ @pkgconfiglibs@ -static-libm -static-libgcc -static-libstdc++
-Cflags: -I${includedir} @pkgconfigcflags@ -static-libgcc -static-libstdc++ -static-libm
+Cflags: -I${includedir} @pkgconfigcflags@ -static-libgcc -static-libstdc++
