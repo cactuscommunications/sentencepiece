@@ -18,7 +18,7 @@ message(STATUS "VERSION: ${SPM_VERSION}")
 project(sentencepiece VERSION ${SPM_VERSION} LANGUAGES C CXX)
 
 option(SPM_ENABLE_NFKC_COMPILE "Enables NFKC compile" OFF)
-option(SPM_ENABLE_SHARED "Builds shared libaries in addition to static libraries." ON)
+option(SPM_ENABLE_SHARED "Builds shared libaries in addition to static libraries." OFF)
 option(SPM_BUILD_TEST "Builds test binaries." OFF)
 option(SPM_COVERAGE "Runs gcov to test coverage." OFF)
 option(SPM_ENABLE_TENSORFLOW_SHARED "Makes a tensorflow compatible shared file." OFF)
@@ -30,7 +30,7 @@ option(SPM_USE_BUILTIN_PROTOBUF "Use built-in protobuf" ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(GCC_CXX_FLAGS ${GCC_CXX_FLAGS} "-static-libgcc -static-libstdc++ -static")
-set(CMAKE_SHARED_LINKER_FLAGS "-static-libgcc -static-libstdc++ -static -Wl,--export-all-symbols")
+set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--export-all-symbols -static-libgcc -static-libstdc++ -static")
 set(LINK_FLAGS ${LINK_FLAGS} "-Wl,-whole-archive")
 
 
