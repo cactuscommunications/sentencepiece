@@ -32,7 +32,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(GCC_CXX_FLAGS ${GCC_CXX_FLAGS})
 #set(GCC_CXX_FLAGS_REALSE ${GCC_CXX_FLAGS_REALSE} "-static-libgcc -static-libstdc++")
 #set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--export-all-symbols -static-libgcc -static-libstdc++")
-set(CMAKE_STATIC_LINKER_FLAGS ${CMAKE_STATIC_LINKER_FLAGS} "-static-libgcc -static-libstdc++" )
+#set(CMAKE_STATIC_LINKER_FLAGS ${CMAKE_STATIC_LINKER_FLAGS} "-static-libgcc -static-libstdc++" )
 #set(LINK_FLAGS ${LINK_FLAGS} "-Wl,-whole-archive -static-libgcc -static-libstdc++")
 
 
